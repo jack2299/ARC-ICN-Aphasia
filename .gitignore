@@ -1,0 +1,65 @@
+# MATLAB specific
+*.asv
+*.mlx~
+*.mat
+*.fig
+*.mex*
+*.p
+*.slxc
+SimulinkCache/
+slprj/
+
+# ============================================================
+# CRITICAL: Your personal config file (DO NOT UPLOAD)
+# ============================================================
+config_local.m
+
+# ============================================================
+# Your pipeline output folders (DO NOT UPLOAD)
+# ============================================================
+Analysis_Output/
+ARC_01_Output/
+ARC_02_Output/
+ARC_03_Output/
+ARC_04_v3_Output/
+ARC_05_v3_Output/
+ARC_06_v3_Output/
+ARC_07_Output/
+*_Output/
+
+# ============================================================
+# Your raw data folders (DO NOT UPLOAD)
+# ============================================================
+SPM_mat_files_backup/
+ICN17_validation/
+Sibi Files/
+NIfTI/
+data/
+raw_data/
+processed_data/
+
+# ============================================================
+# OS junk files
+# ============================================================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+Desktop.ini
+
+# ============================================================
+# IDE files
+# ============================================================
+.vscode/
+.idea/
+*.project
+*.classpath
+
+# ============================================================
+# Archive files
+# ============================================================
+*.zip
+*.tar
+*.gz
+*.7z
+*.rar
