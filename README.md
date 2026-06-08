@@ -1,51 +1,55 @@
-# ARC-ICN-Aphasia
+# QC Corrective Scripts
 
-Analysis pipeline for: **ICN Engagement Predicts Aphasia Severity in Chronic Stroke**
-
-## Overview
-MATLAB scripts for analysing intrinsic connectivity network (ICN) engagement during covert picture naming in the Aphasia Recovery Cohort (ARC).
-
-## Requirements
-- MATLAB R2025a (or compatible)
-- SPM12 (Wellcome Centre for Human Neuroimaging)
-- ICN_Atlas toolbox (version r20180306; Kozák et al., 2017)
-
-## Data
-The Aphasia Recovery Cohort is publicly available on OpenNeuro:  
-https://openneuro.org/datasets/ds004884
-
-DOI: 10.18112/openneuro.ds004884.v1.0.2
+This branch contains the quality-control corrective scripts that were run after discovering that 14 rest‑only aphasia participants had spurious ICN engagement values (non‑NaN zeros) in the original merged table.  
+These scripts re‑run all contaminated analyses on the **clean aphasia sample** (rest‑only excluded, valid C2 IRi) and produce the corrected results used in the final manuscript.
 
 ## Scripts
 
-| Script | Description |
-|--------|-------------|
-| ARC_01_DataInventory.mlx | Data inventory and initial setup |
-| ARC_02b_xATL_Diagnostics.m | Atlas diagnostics |
-| ARC_02c_ConFile_Inventory.m | Contrast file inventory |
-| ARC_03a_Individual_ICN_Extraction.m | ICN metric extraction per participant |
-| ARC_03b_v3_Compile_Results.m | Compile results and apply IRi QC |
-| ARC_03c_v3_Statistical_Analysis.m | Statistical analysis (disease, subtype, severity, contrast specificity) |
-| ARC_04_v3_Lesion_Network_Analysis.m | Lesion-network analysis (presence, disconnection, mediation) |
-| ARC_05_v3_VolumeStratified_Analysis.mlx | Volume stratification with meta-analysis |
-| ARC_06_v3_Smith10_Robustness.mlx | Cross-atlas validation (Smith10) |
-| config_local.m | Local path configuration (template) |
-| config_template.m | Configuration template |
+| Script | Purpose |
+|--------|---------|
+| `motion_posthoc_extraction_rigorous.m` | Extracts mean rotation (degrees) and mean translation (mm) from realignment parameters for the clean aphasia sample. Saves `Motion_Extracted.mat`. |
+| `motion_posthoc_rigorous.m` | Runs partial Spearman correlations between motion metrics and ICN engagement (IRi) for all 18 ICNs, with FDR correction. Generates `MOTION_REPORT.txt` and CSV outputs. |
+| `MasterRerun_levels1_to_4_cleansample.m` | Re‑runs Levels 1‑4 (disease effect, subtype, severity, contrast specificity) on the clean sample. Saves `CleanSample_Results_Rigorous.mat`. |
+| `MasterRerun_remainingLevels_cleansample.m` | Comprehensive re‑run of all remaining engagement‑based analyses: Level 8 (disconnection), Level 8b (specificity), Level 10b (bootstrap mediation), volume‑stratified engagement meta‑analysis, cross‑atlas validation (Smith10 S06), IRi threshold sensitivity. Produces all `QC_Corrected_*.csv` files and a comparison report. |
 
-## Setup
-1. Download ARC dataset from OpenNeuro
-2. Copy `config_template.m` to `config_local.m`
-3. Edit `config_local.m` with your local paths
-4. Run scripts in numerical order
+## Required data files
 
-## Citation
-[Manuscript in preparation]
+These scripts do **not** include the ARC dataset. You must obtain the following files from the [Aphasia Recovery Cohort](https://openneuro.org/datasets/ds004884) (OpenNeuro) or from the processed pipeline outputs:
 
-## Contact
-jkissane22@gmail.com
+- `ARC_03b_v3_Master_Wide.mat` – post‑IRi‑QC engagement master table  
+- `ARC_04_v3_AllResults.mat` – resample log and merged lesion‑engagement table  
+- `ARC_06_v3_AllResults.mat` – Smith10 atlas engagement data (for cross‑atlas validation)  
+- `task_fmri_first_session.csv` – run mapping (from the ARC dataset)  
+- `ds004884‑rp_files/` – folder containing `rp_*.txt` realignment parameter files  
 
-## Acknowledgements
-ICN_Atlas toolbox: Kozák LR et al. (2017) NeuroImage 163:319–341
+Place these files in the same folder as the scripts before running.
 
-## License
-MIT License
+## How to run
+
+1. Run `motion_posthoc_extraction_rigorous.m` to generate `Motion_Extracted.mat`.  
+2. Run `motion_posthoc_rigorous.m` to perform the motion sensitivity analysis.  
+3. Run `MasterRerun_levels1_to_4_cleansample.m` to produce `CleanSample_Results_Rigorous.mat`.  
+4. Run `MasterRerun_remainingLevels_cleansample.m` to generate all corrected CSV outputs and the comparison report.
+
+All scripts are self‑contained and will save outputs to the current folder. They use the same methods, covariates, and FDR correction as the original pipeline.
+
+## Output files
+
+After running all scripts, the folder will contain:
+
+- `Motion_Extracted.mat`  
+- `Motion_Results_Rotation.csv`, `Motion_Results_Translation.csv`, `MOTION_REPORT.txt`  
+- `CleanSample_Results_Rigorous.mat`  
+- `QC_Corrected_Level8_IRi.csv`, `QC_Corrected_Level8_MANi.csv`, `QC_Corrected_Level8_logVari.csv`  
+- `QC_Corrected_Level8b.csv`  
+- `QC_Corrected_Level10b.csv`  
+- `QC_Corrected_VolumeStrat_Engagement_IRi.csv`, `…_MANi.csv`, `…_logVari.csv`  
+- `QC_Corrected_Smith10_S06.csv`  
+- `QC_Corrected_IRi_Sensitivity.csv`  
+- `QC_Corrected_Comparison_Report.txt`
+
+These are the corrected results used in the manuscript.
+
+## Note
+
+The original (uncorrected) pipeline scripts remain on the `main` branch. This branch exists to provide a transparent, reproducible record of the quality‑control step and to allow others to regenerate the corrected numbers.
