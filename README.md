@@ -37,6 +37,7 @@ DOI: 10.18112/openneuro.ds004884.v1.0.2
 2. Copy `config_template.m` to `config_local.m`
 3. Edit `config_local.m` with your local paths
 4. Run scripts in numerical order
+5. Consult data release on OpenNeuro for participants.txt
 
 ## Citation
 [Manuscript in preparation]
