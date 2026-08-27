@@ -1,9 +1,9 @@
 # ARC-ICN-Aphasia
 
-Analysis pipeline for: **ICN Engagement Predicts Aphasia Severity in Chronic Stroke**
+Analysis pipeline for: **ICN Engagement is associated with Aphasia Severity in Chronic Stroke**
 
 ## Overview
-MATLAB scripts for analysing intrinsic connectivity network (ICN) engagement during covert picture naming in the Aphasia Recovery Cohort (ARC).
+MATLAB scripts for analysing intrinsic connectivity network (ICN) engagement during picture naming in the Aphasia Recovery Cohort (ARC).
 
 ## Requirements
 - MATLAB R2025a (or compatible)
