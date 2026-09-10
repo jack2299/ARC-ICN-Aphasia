@@ -54,5 +54,7 @@ These are the corrected results used in the manuscript.
 
 The original (uncorrected) pipeline scripts remain on the `main` branch. This branch exists to provide a transparent, reproducible record of the quality‑control step and to allow others to regenerate the corrected numbers.
 
+License and contact info are inherited from the main  branch.
+
 ## `restOnlyList`
 `restOnlyList` contains the anonymised ARC identifiers of participants whose first-session functional acquisition was resting-state only, and who therefore have no task contrast. It was derived from the session inventory and is hardcoded for portability because the inventory file is not redistributable. Of the 36 listed, 21 had otherwise-valid Naming > Abstract data and were excluded on this basis (14 with aphasia, 7 stroke controls).
