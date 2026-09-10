@@ -58,6 +58,9 @@ If you use this repository, please cite the ARC dataset:
 
 Manuscript citation: [Manuscript in preparation]
 
+## **Python validation scripts**
+The my-folder/ directory contains the Python scripts used for the BM17 anatomical validation, including mask generation, Neurosynth density mapping, and the label permutation test. See my-folder/README.md for full details.
+
 ## Contact
 jkissane22@gmail.com
 
