@@ -12,9 +12,9 @@ MATLAB scripts for analysing intrinsic connectivity network (ICN) engagement dur
 
 ## Data
 The Aphasia Recovery Cohort is publicly available on OpenNeuro:  
-https://openneuro.org/datasets/ds004884
+https://openneuro.org/datasets/ds004884/versions/1.0.2
 
-DOI: 10.18112/openneuro.ds004884.v1.0.2
+doi:10.18112/openneuro.ds004884.v1.0.2
 
 ## Scripts
 
@@ -29,7 +29,6 @@ DOI: 10.18112/openneuro.ds004884.v1.0.2
 | ARC_04_v3_Lesion_Network_Analysis.m | Lesion-network analysis (presence, disconnection, mediation) |
 | ARC_05_v3_VolumeStratified_Analysis.mlx | Volume stratification with meta-analysis |
 | ARC_06_v3_Smith10_Robustness.mlx | Cross-atlas validation (Smith10) |
-| config_local.m | Local path configuration (template) |
 | config_template.m | Configuration template |
 
 ## Setup
