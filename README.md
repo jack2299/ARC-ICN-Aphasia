@@ -21,8 +21,7 @@ doi:10.18112/openneuro.ds004884.v1.0.2
 ### Atlases and tools
 - BrainMap20
 - SMITH10
-- JHU white matter atlas
-- Neurosynth v7 meta-analytic maps
+- Neurosynth v7 meta-analytic maps (my-folder)
 - ICN_Atlas toolbox, Z-threshold = 3
 
 ## Scripts
@@ -71,4 +70,4 @@ ICN_Atlas toolbox: Kozák LR et al. (2017) NeuroImage 163:319–341
 MIT License
 
 ## Note
-The QC-corrective-scripts-ran-on-clean-sample relates tot he rerunning of levels 1-4 because the original analysis contained data from participants that was resting-state only instead of task-based fMRI. The clean sample refers to a pure task-based fMRI sample.
+The separate branch, QC-corrective-scripts-ran-on-clean-sample, relates tot he rerunning of levels 1-4 because the original analysis contained data from participants that was resting-state only instead of task-based fMRI. The clean sample refers to a pure task-based fMRI sample.
