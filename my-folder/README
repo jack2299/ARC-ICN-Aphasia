@@ -12,6 +12,7 @@ The validation tests whether BM17 preferentially captures speech-motor circuitry
 | `voxelwise_neurosynth_validation.py` | Builds speech and motor coordinate-density maps from Neurosynth v7 within the BM17 mask, normalises them, and produces descriptive statistics, top peaks, cluster reports, and Pearson correlation. |
 | `permutation_test_further_checks.py` | Runs a study-label permutation test (10,000 iterations) to test spatial dissociation between speech and motor maps within the target mask. |
 | `diagnostic.py` | Prints basic properties of a NIfTI mask (size, shape, data type, unique values, non-zero voxel count). Used for sanity-checking masks. |
+| tobit_check_on_finalsample_residuals.py | Censored Tobit regression sensitivity analysis for the BM17 engagement-severity relationship. |
 
 ## Requirements
 
