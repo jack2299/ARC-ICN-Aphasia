@@ -34,6 +34,7 @@ doi:10.18112/openneuro.ds004884.v1.0.2
 | ARC_03a_Individual_ICN_Extraction.m | ICN metric extraction per participant |
 | ARC_03b_v3_Compile_Results.m | Compile results and apply IRi QC |
 | ARC_03c_v3_Statistical_Analysis.m | Statistical analysis (disease, subtype, severity, contrast specificity) |
+| ARC_03d_v5_Visualization_CLEAN_FINAL.m | Publication figure generation (clean sample) |
 | ARC_04_v3_Lesion_Network_Analysis.m | Lesion-network analysis (presence, disconnection, mediation) |
 | ARC_05_v3_VolumeStratified_Analysis.mlx | Volume stratification with meta-analysis |
 | ARC_06_v3_Smith10_Robustness.mlx | Cross-atlas validation (Smith10) |
