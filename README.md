@@ -38,7 +38,6 @@ doi:10.18112/openneuro.ds004884.v1.0.2
 | ARC_04_v3_Lesion_Network_Analysis.m | Lesion-network analysis (presence, disconnection, mediation) |
 | ARC_05_v3_VolumeStratified_Analysis.mlx | Volume stratification with meta-analysis |
 | ARC_06_v3_Smith10_Robustness.mlx | Cross-atlas validation (Smith10) |
-| config_template.m | Configuration template |
 
 ### Configuration
 `config_local.m` is user-created. Copy `config_template.m` to `config_local.m` and edit it with your local paths.
