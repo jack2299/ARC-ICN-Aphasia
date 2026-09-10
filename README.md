@@ -1,6 +1,6 @@
 # ARC-ICN-Aphasia
 
-Analysis pipeline for: **ICN Engagement is associated with Aphasia Severity in Chronic Stroke**
+Analysis pipeline for: **ICN engagement is associated with aphasia severity in chronic stroke**
 
 ## Overview
 MATLAB scripts for analysing intrinsic connectivity network (ICN) engagement during picture naming in the Aphasia Recovery Cohort (ARC).
@@ -67,3 +67,6 @@ ICN_Atlas toolbox: Kozák LR et al. (2017) NeuroImage 163:319–341
 
 ## License
 MIT License
+
+## Note
+The QC-corrective-scripts-ran-on-clean-sample relates tot he rerunning of levels 1-4 because the original analysis contained data from participants that was resting-state only instead of task-based fMRI. The clean sample refers to a pure task-based fMRI sample.
