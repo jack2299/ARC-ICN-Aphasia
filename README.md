@@ -52,6 +52,8 @@ These are the corrected results used in the manuscript.
 
 ## Note
 
+The QC pipeline re‑ran all three engagement metrics (IRi, MANi, logVari) at every analysis level. The manuscript reports IRi, with MANi and logVari described as secondary/exploratory metrics and their results reported in the Supplementary. All three are included here for reproducibility.
+
 The original (uncorrected) pipeline scripts remain on the `main` branch. This branch exists to provide a transparent, reproducible record of the quality‑control step and to allow others to regenerate the corrected numbers.
 
 License and contact info are inherited from the main  branch.
