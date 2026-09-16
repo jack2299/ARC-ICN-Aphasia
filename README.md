@@ -72,3 +72,5 @@ MIT License
 
 ## Note
 The separate branch, QC-corrective-scripts-ran-on-clean-sample, relates tot he rerunning of levels 1-4 because the original analysis contained data from participants that was resting-state only instead of task-based fMRI. The clean sample refers to a pure task-based fMRI sample.
+
+A threshold sensitivity analysis was computed during development and is not part of the published work. This is relevant to script: ARC_03c_v3_Statistical_Analysis.m
