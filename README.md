@@ -35,6 +35,7 @@ doi:10.18112/openneuro.ds004884.v1.0.2
 | ARC_03b_v3_Compile_Results.m | Compile results and apply IRi QC |
 | ARC_03c_v3_Statistical_Analysis.m | Statistical analysis (disease, subtype, severity, contrast specificity) |
 | ARC_03d_v5_Visualization_CLEAN_FINAL.m | Publication figure generation (clean sample) |
+| ARC_03e_v3_UniqueVariance_Regression.m | Hierarchical regression computing the unique variance of BM17 engagement beyond lesion volume and covariates. Produces the ΔR² reported in the Abstract. |
 | ARC_04_v3_Lesion_Network_Analysis.m | Lesion-network analysis (presence, disconnection, mediation) |
 | ARC_05_v3_VolumeStratified_Analysis.mlx | Volume stratification with meta-analysis |
 | ARC_06_v3_Smith10_Robustness.mlx | Cross-atlas validation (Smith10) |
@@ -58,8 +59,8 @@ If you use this repository, please cite the ARC dataset:
 
 Manuscript citation: [Manuscript in preparation]
 
-## **Python validation scripts**
-The my-folder/ directory contains the Python scripts used for the BM17 anatomical validation, including mask generation, Neurosynth density mapping, and the label permutation test. See my-folder/README.md for full details.
+## Python validation scripts
+The `my-folder/` directory contains the Python scripts used for the BM17 anatomical validation, including mask generation, Neurosynth density mapping, and the label permutation test. See `my-folder/README.md` for full details.
 
 ## Contact
 jkissane22@gmail.com
@@ -71,6 +72,6 @@ ICN_Atlas toolbox: Kozák LR et al. (2017) NeuroImage 163:319–341
 MIT License
 
 ## Note
-The separate branch, QC-corrective-scripts-ran-on-clean-sample, relates tot he rerunning of levels 1-4 because the original analysis contained data from participants that was resting-state only instead of task-based fMRI. The clean sample refers to a pure task-based fMRI sample.
+The separate branch `QC-corrective-scripts-ran-on-clean-sample` relates to the re-running of Levels 1–4, because the original analysis contained data from participants whose first-session acquisition was resting-state only rather than task-based fMRI. The clean sample refers to a pure task-based fMRI sample.
 
-A threshold sensitivity analysis was computed during development and is not part of the published work. This is relevant to script: ARC_03c_v3_Statistical_Analysis.m
+A threshold sensitivity analysis was computed during development and is not part of the published work. This is relevant to the script `ARC_03c_v3_Statistical_Analysis.m`.
