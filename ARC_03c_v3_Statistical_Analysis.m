@@ -16,7 +16,6 @@
 %   - Output filenames updated to v3
 %   - NEW: Bayesian subtype analysis (BIC-based Bayes Factor) after Level 2
 %   - NEW: Bootstrap mediation with BCa CIs after Level 6 (replaces Level 10)
-%   - NEW: IRi threshold sensitivity analysis
 %   - Mediation reporting: Unstandardized indirect effects (not %)
 %   - logVari columns saved to master tables
 %
@@ -38,9 +37,14 @@
 %   - ARC_03c_v3_Output/ARC_03c_v3_Level[1-6]_*.csv
 %   - ARC_03c_v3_Output/ARC_03c_v3_Level2_Bayesian.csv (NEW)
 %   - ARC_03c_v3_Output/ARC_03c_v3_Bootstrap_Mediation.mat (NEW)
-%   - ARC_03c_v3_Output/ARC_03c_v3_IRi_Sensitivity.csv (NEW)
 %   - ARC_03c_v3_Output/ARC_03c_v3_AllResults.mat
 %   - ARC_03c_v3_Output/ARC_03c_v3_Summary.txt
+%
+% Important note (16/09/26)
+%    - Just ignore the IRi THRESHOLD SENSITIVITY ANALYSIS
+%        - It's flawed and doesn't add anything to the analysis, with respect to both its implementation and outputs.
+%
+
 % =========================================================================
 
 %% SETUP
