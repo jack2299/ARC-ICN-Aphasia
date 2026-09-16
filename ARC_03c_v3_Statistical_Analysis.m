@@ -41,8 +41,12 @@
 %   - ARC_03c_v3_Output/ARC_03c_v3_Summary.txt
 %
 % Important note (16/09/26)
-%    - Just ignore the IRi THRESHOLD SENSITIVITY ANALYSIS
-%        - It's flawed and doesn't add anything to the analysis, with respect to both its implementation and outputs.
+% IRi THRESHOLD SENSITIVITY ANALYSIS
+% NOTE: This analysis was computed during development but is not part of the
+% published manuscript or supplement. It is retained here as a record of the
+% analytic workflow. The threshold sweep operates on matrices saved after QC
+% exclusion, so the 0.7 and 0.8 thresholds do not materially alter the sample;
+% the block is retained for transparency only and should not be interpreted.
 %
 
 % =========================================================================
