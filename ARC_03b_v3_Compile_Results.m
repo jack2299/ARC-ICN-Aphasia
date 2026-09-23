@@ -16,7 +16,7 @@
 %   - Documented IRi threshold as principled criterion (>20% outside ICNs)
 %
 % METRIC DEFINITIONS:
-%   - IRi: ICNiRelativeInvolvement (% of whole-brain activation in ICN)
+%   - IRi: ICNiRelativeInvolvement (proportion of suprathreshold activation across all 20 atlas components falling in this ICN)
 %   - MANi: NormalisedMeanICNiActivation (0-1 normalized)
 %   - Vari: var(ZActiveVoxels) (spatial variance of Z-scores)
 %
@@ -48,8 +48,8 @@ fprintf('Start time: %s\n\n', datestr(now));
 
 fprintf('*** V3 CHANGES ***\n');
 fprintf('IRi QC: Subjects with IRi sum < 0.8 will be EXCLUDED\n');
-fprintf('Rationale: >20%% of activation outside defined ICNs indicates\n');
-fprintf('           poor atlas coverage or data quality issues.\n');
+fprintf('Rationale: >20% of activation outside defined ICNs indicates\n');
+fprintf('           >20% of atlas-wide activation in the artefact components.\n');
 fprintf('This is a PRINCIPLED criterion, not data-driven.\n\n');
 
 %% V3 CHANGE: Define IRi QC threshold
@@ -861,7 +861,7 @@ fprintf(fid, 'CORRECTED METRICS\n');
 fprintf(fid, '-----------------------------------------------------------------\n');
 fprintf(fid, 'IRi:  ICNiRelativeInvolvement (was PropActiveVoxels)\n');
 fprintf(fid, '      Measures: Proportion of whole-brain activation in this ICN\n');
-fprintf(fid, '      Range: 0-1, sums to ~1 across ICNs\n');
+fprintf(fid, '      Range: 0-1, sums to just under 1 across the 18 ICNs, short by the artefact fraction\n');
 fprintf(fid, '      PRIMARY METRIC - sensitive to extensive activations\n\n');
 fprintf(fid, 'MANi: NormalisedMeanICNiActivation (was MeanActiveVoxels)\n');
 fprintf(fid, '      Measures: Normalized mean Z-score within ICN\n');
